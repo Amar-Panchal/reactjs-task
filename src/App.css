@@ -1,38 +1,608 @@
-.App {
-  text-align: center;
+body{
+  background-color: #E5E5E5;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  font-family: 'IBM Plex Sans', sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.Navbar{
+  background-color: #FFFFFF;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: 3rem;
+  margin-left: 3rem;
+}
+.Navbar .row1 h3{
+  color: #5C5D5D  ;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: normal;
+}
+.Navbar .row1 img{
+  width: 2rem;
+  height: 1.8rem;
+  margin-top: -2px;
+}
+.Navbar .row1 h3 span{
+  color: #27A365;
+  font-style: normal;
+  font-weight: normal;
+}
+.Navbar .row2 input{
+  width: 360px;
+  height: 38px;
+  padding: 0 15px;
+  font-size: 14px;
+  border-radius: 20px;
+  color: #2b2a2a;
+  box-shadow: none;
+  background-color: #F2F2F2;
+  border: 5px solid #F2F2F2;
+}
+.Navbar .row3 h3{
+  font-size: 1rem;
+  color: #2E2E2E;
+  font-weight: 550;
+
+}
+.Navbar .row3 h3 span{
+  color: #2F6CE5;
+  font-weight: 600;
+}
+.poster{
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.6) 100%),url(./Images/backgroudposter.jpg);
+  max-height: 500px;
+  background-position: 0%;
+  background-repeat:space;
+  overflow: hidden;
+  position:relative;
+  width: 100%;
+  
+}
+.poster  h2{
+  color:#FFFFFF;
+  font-size: 36px;
+  line-height: 47px;
+  font-weight: bold;
+  margin-left: 200px;
+  margin-top:358px;
+}
+.poster  p{
+  font-size: 18px;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin-left: 200px;
+}
+.Header{
+  margin-top: 2rem;
+  border-bottom: 1px solid #E0E0E0;
+}
+.Header .row1 a{
+  padding-top: 5px;
+  margin-right: 20px;
+  font-size: 16px;
+  color: #8A8A8A;
+  text-decoration: none;
+  padding-bottom: 19px;
+}
+.Header .row1 a:focus{
+  border-bottom:1px solid #000000 ;
+  color: #000000;
+}
+
+
+.Header .row2{
+  padding-bottom: 12px;
+}
+.Header .row2 .post-btn{
+  font-size: 15px;
+  color: #000000;
+  font-weight: 600;
+  background-color: #EDEEF0 ;
+  width: 133px;
+  height: 36px;
+  border: 1px solid #EDEEF0;
+  border-radius: 5px;
+
+}
+.Header .row2 .post-btn span{
+    margin-left: 10px;
+    font-size: 1.1rem;
+}
+.Header .row2 .join-btn{
+  font-size: 15px;
+  color: #FFFFFF;
+  font-weight: 550;
+  background-color: #2F6CE5 ;
+  width: 133px;
+  height: 36px;
+  border: 1px solid #2F6CE5;
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin-left: 16px;
+  border-radius: 5px;
+}
+.Header .row2 .join-btn span{
+  font-size: 1rem;
+
+}
+.mobile-modalbody .close{
+
+  background-color: #000000;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 1px 6px 3px;
+  border: 2px solid #000000;
+}
+.mobile-modalbody .mobile-signup-btn{
+  background: #2F6CE5;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  
+  margin-left: 26px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 10px 17px 10px;
+  margin-top: 19px;
+  border: 1px solid #2F6CE5;
+  border-radius: 20px;
+
+}
+.modal-dialog{
+  margin-top: 130px !important;
+  width: 740px;
+  height: 513px;
+}
+.modal-header{
+  background: #EFFFF4;
+  
+}
+.modaltitle{
+  color: #008A45;
+  font-weight: 500;
+  padding: 5px 50px ;
+  font-size: 14px !important;
+  line-height: 16px;
+  line-height: 0 !important;
+  border-radius: 8px 8px 0px 0px;
+}
+.modalbody .sign-up h5{
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 31px;
+}
+.modalbody .sign-up p{
+  font-size: 15px;
+  line-height: 17px;
+  color: #3D3D3D;
+  margin-right: 36px;
+}
+.modalbody .sign-up p span{
+  color: #2F6CE5;
+  cursor: pointer;
+
+}
+.modalbody .signup-form img{
+  width: 350px;
+  height: 350px;
+}
+.modalbody .signup-form{
+  margin-top: 36px;
+
+}
+.modalbody .terms{
+  font-size: 10px;
+  line-height: 16px;
+  text-align: right;
+  letter-spacing: -0.008em;
+  color: #000000;
+  opacity: 0.6;
+  margin-right: 36px;
+}
+.modalbody .signup-form input{
+  width: 360px;
+  height: 46px;
+  padding-left: 15px;
+  margin-left: 26px;
+
+
+}
+.modalbody .close-btn{
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 1px 6px 3px;
+  border: 2px solid #000000;
+  align-self: end;
+  position: absoulte;
+  margin-top:-59px ;
+}
+.modalbody .signup-form input.name{
+  width: 180px;
+  height: 46px;
+  
+}
+.modalbody .signup-form input.name2{
+  margin-left: 0;
+}
+.modalbody .signup-form .facebooksingup-btn span{ 
+  color: #2F6CE5;
+  cursor: pointer;
+}
+.modalbody .signup-form .facebooksingup-btn { 
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 16px;
+  width: 360px;
+  text-align: center;
+  color: #000000;
+  padding: 14px 0;
+  margin-left: 26px;
+
+  background-color: #FFFFFF;
+  border: 0.6px solid #D9D9DB;
+  cursor: pointer;
+
+}
+.modalbody .signup-form .googlesingup-btn { 
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 16px;
+  width: 360px;
+  text-align: center;
+  color: #000000;
+  margin-left: 26px;
+  padding: 14px 0;
+  background-color: #FFFFFF;
+  border: 0.6px solid #D9D9DB;
+}
+.modalbody .forgot-password{
+  margin-top: 36px;
+}
+.modalbody .signup-form .googlesingup-btn span,.modalbody .signup-form .facebooksingup-btn span{
+  margin-right: 10px;
+}
+.modalbody .signup-form .signup-btn{
+  background: #2F6CE5;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  width: 360px;
+  margin-left: 26px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 14px 0;
+  margin-top: 19px;
+  border: 1px solid #2F6CE5;
+  border-radius: 20px;
+
+}
+.Blog{
+  margin-top: 1rem;
+}
+.Blog .row2{
+  margin-top: 56px;
+  margin-left: 26px;
+}
+.Blog .row2 h5{
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #B8B8B8
+  ;
+}
+.Blog .row2 h5 span{
+    font-size: 20px;
+}
+.Blog .row2 h5 .pencil-icon{
+  margin-left: 124px;
+}
+.Blog .row2 .groupsName h4{
+  margin-top: 50px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 36px;
+}
+.Blog .row2 .groupsName h4 span{
+ margin-right: 10px;
+}
+.Blog .row2 .groupsName img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.Blog .row2 .groupsName .follow{
+  padding: 4px 12px 4px;
+  font-size: 12px;
+  background-color: #EDEEF0;
+  border: 1px solid #EDEEF0;
+  border-radius: 14px;
+  
+}
+.Blog .row2 .groupsName .followed{
+  padding: 4px 12px 4px;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-color: #000000;
+  border: 1px solid #000000;
+  border-radius: 14px;
+  
+}
+.Blog .row2 .groupsName .group{
+  margin-bottom: 20px;
+}
+.Blog .row2 .read-more{
+  margin-top: 50px;
+  color: #0956f1;
+  font-size: 15px;
+  text-align: right;
+}
+.Blog .row2 p{
+  margin-top: 1.5rem;
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 0.5;
+}
+.Blog .row2 p.icon{
+  margin-right: 7px;
+  font-size: 16px;
+}
+.Blog .row1 .Card1 {
+  margin-top: 18px;
+  width: 100%;
+  height: max-content;
+  padding-bottom: 10px;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.Blog .row1 .Card1 img{
+  width: 100%;
+  height: 220px;
+}
+.Blog .row1 .Card1 h5 span{
+  margin-right: 5px;
+}
+.Blog .row1 .Card1 h5{
+  font-size: 16px;
+  margin-left: 20px;
+  margin-top:15px;
+}
+.Blog .row1 .Card1 h4{
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 134.17%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.Blog .row1 .Card1 .icon{
+  margin-right: 20px;
+  background-color: #FFFFFF;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 1.5rem;
+  margin-right: 20px;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Blog .row1 .Card1 .icon:focus{
+  background-color: #A9AEB8;
+}
+.Blog .row1 .Card1 p.desc{
+  font-size: 15px;
+  line-height: 134.17%;
+  color: #5C5C5C;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  width: 80%;
+}
+.Blog .row1 .Card1 .blog-user{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.Blog .row1 .Card1 .blog-user img{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.Blog .row1 .Card1 .blog-user h5{
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  padding-bottom: 12px;
+}
+.Blog .row1 .Card1 .blog-user h6{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 0;
+  color: #525252;
+  padding-top: 7px;
+  cursor: pointer;
+}
+.Blog .row1 .Card1 .blog-user .eye-icon{
+  margin-right: 10px;
+  cursor: pointer;
+}
+.Blog .row1 .Card1 .blog-user .share-icon{
+  margin-left: 50px;
+  background-color: #EDEEF0;
+  border-radius: 2px;
+  padding: 6px 16px;
+  cursor: pointer;
+}
+.Blog .row1 .cardnum3 {
+  margin-top: 18px;
+  width: 100%;
+  height: max-content;
+  padding-bottom: 10px;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.Blog .row1 .cardnum3 .card-date{
+  margin-right: 40px;
+  margin-left: 20px;
+}
+.Blog .row1 .cardnum3 .vist-btn{
+
+  width: 90%;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  padding: 8px;
+  background: #FFFFFF;
+  border: 0.7px solid #A9AEB8;
+  border-radius: 10px;
+  color: #E56135;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.Blog .row1 .cardnum4{
+  width: 100%;
+  height: max-content;
+  padding-bottom: 10px;
+  margin-bottom: 80px;
+}
+.Blog .row1 .cardnum4 .card-job{
+  margin-right: 40px;
+  margin-left: 20px;
+}
+.Blog .row1 .cardnum4 .apply-btn{
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 90%;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  padding: 8px;
+  background: #FFFFFF;
+  border: 0.7px solid #A9AEB8;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: #02B875;
+}
+
+.mobile-navbar{
+  background-color: #F8F9FA;
+}
+.mobile-navbar p{
+  font-size: 1rem;
+  color: #868E96;
+  text-align: end;
+  margin-right: 2rem;
+  margin-bottom: 5px;
+}
+.mobile-navbar p span{
+  font-size: 1.1rem;
+  margin-left: 1rem;
+}
+.mobile-poster .join-btn{
+  color: #FFFFFF;
+  background-color: transparent;
+  padding: 6px 16px 6px;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+}
+.mobile-poster h4{
   color: white;
+  font-size: 26px;
 }
 
-.App-link {
-  color: #61dafb;
+.mobile-header h6{
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  color: #212529;
+
+}
+.mobile-header .icon{
+  background-color: #F1F3F5;
+  font-size: 14px;
+  border: 1px solid #F1F3F5;
+  border-radius: 4px;
+  padding: 4px 16px 4px;
+}
+.mobile-header .icon span{
+  margin-left: 1rem;
+}
+@media(max-width:994px){
+    .Blog .row2{
+      display: none;
+    }
+    .Navbar .row3{
+      display: none;
+    }
+    
+    .poster h2{
+      margin-top:300px;
+      margin-left: 20px;
+    }
+    .poster  p{
+      margin-left: 20px;
+    }
+    .modalbody .modaltitle{
+      display: none;
+    }
+    .modalbody .signup-form img{
+      display: none;
+    }
+    .modalbody .signup-form .terms{
+      display: none;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media(max-width:768px){
+  
+  .poster h2{
+    font-size: 2rem;
+    line-height: 26px;
   }
-  to {
-    transform: rotate(360deg);
+  .poster p{
+    font-size: 16px;
   }
+
+  
+  
+
+  
+}
+@media(max-width:579px){
+  .Navbar{
+    display: none;
+  }
+  .Header{
+    display: none;
+  }
+  .container{
+    margin: 0px !important;
+    width: 100%;
+  }
+  .Card1{
+    margin-left: -6px 
+  }
+  .modalbody .signup-form input{
+    width: 360px;
+    height: 46px;
+    padding-left: 15px;
+    margin-left: 5px;
+  
+  
+  }
+  .modalbody{
+    margin-right: 10px;
+  }
+
 }
