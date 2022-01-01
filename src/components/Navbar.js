@@ -2,7 +2,6 @@ import { Modal } from 'react-bootstrap';
 import React,{useState} from 'react'
 import { IoMdArrowDropdown } from 'react-icons/io';
 import index from '../Images/index.png';
-import {MdGroupAdd} from 'react-icons/md';
 import {BsFacebook} from 'react-icons/bs'
 import signup from '../Images/signup.jpg'
 import {FcGoogle} from 'react-icons/fc'
@@ -31,13 +30,13 @@ function Navbar() {
                 Create account.<span onClick={handleShow}> It's free!</span><IoMdArrowDropdown/>
             </h3>
         </div>
-        <Modal show={show}  size="lg"  onHide={handleClose} className="modalbody d-sm-none d-md-block d-lg-block" >
+        <Modal show={show}  size="xl" aria-labelledby="contained-modal-title-vcenter" centered onHide={handleClose} className="modalbody" >
                     <button className="close-btn" onClick={handleClose}>
                     <IoCloseSharp />
                     </button>
                 <Modal.Header >
                 
-                <Modal.Title className="modaltitle ">Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼
+                <Modal.Title className="modaltitle mx-auto">Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼
                 </Modal.Title>
                 </Modal.Header>
                 <Modal.Body >
@@ -45,9 +44,9 @@ function Navbar() {
                         <h5>Create Account</h5>
                         <p>Already have an account?<span  onClick={signInhandleShow}> Sign In </span></p>
                     </div>
-                    <div className="signup-form d-flex justify-content-between align-content-center">
+                    <div className="signup-form d-flex justify-content-between align-items-center pb-3">
                         <div>
-                            <div className=" d-inline-flex">   
+                            <div className=" d-flex">   
                                 <input className="name" type="text" placeholder="First Name" />
                                 <input className="name name2" type="text" placeholder="Last Name" />
                             </div>
@@ -63,7 +62,7 @@ function Navbar() {
                         </div>
                         <div>
                             <img src={signup} alt="" />
-                            <p className="terms">By signing up, you agree to our Terms & conditions, Privacy policy</p>
+                            <p className="terms ">By signing up, you agree to our Terms & conditions, Privacy policy</p>
                         </div>
                     </div>
                 </Modal.Body>
@@ -71,7 +70,7 @@ function Navbar() {
                 </Modal>
 
 
-                <Modal show={signInshow}  size="lg" onHide={signInhandleClose} className="modalbody  d-sm-none  d-md-block d-lg-block" >
+                <Modal show={signInshow}  size="xl" aria-labelledby="contained-modal-title-vcenter" centered onHide={signInhandleClose} className="modalbody" >
                     <button className="close-btn" onClick={signInhandleClose}>
                     <IoCloseSharp />
                     </button>
@@ -85,14 +84,16 @@ function Navbar() {
                         <h5>Sign In</h5>
                         <p>Don’t have an account yet?<span  onClick={handleShow}> Create new for free!</span></p>
                     </div>
-                    <div className="signup-form d-flex justify-content-between align-content-center">
+                    <div className="signup-form d-flex justify-content-between align-items-center pb-5">
                         <div>
-                        <input  type="email" placeholder="Email" />
-                        <input  type="password" placeholder="Password" />  
-                        <button className="signup-btn">Sign In</button>
-                        <button className='facebooksingup-btn'><span><BsFacebook /></span> Sign In with Facebook</button>
-                        <button className='googlesingup-btn'><span><FcGoogle /></span> Sign In with Google</button>
-                        <h6 className="forgot-password text-center">Forgot Password?</h6>
+                            <div>
+                                <input type="email" placeholder="Email" /><br/>
+                                <input type="password" placeholder="Password" /><br />
+                            </div>
+                            <button className="signup-btn">Sign In</button>
+                            <button className='facebooksingup-btn'><span><BsFacebook /></span> Sign In with Facebook</button>
+                            <button className='googlesingup-btn'><span><FcGoogle /></span> Sign In with Google</button>
+
                         </div>
                         <div>
                             <img src={signup} alt="" />
