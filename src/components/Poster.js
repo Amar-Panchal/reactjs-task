@@ -22,7 +22,7 @@ function Poster() {
                 <h4><FaArrowLeft/></h4>
                 <button className='join-btn' onClick={signInhandleShow}>Join Group</button>
             </div>
-            <Modal show={show}  size="xl" aria-labelledby="contained-modal-title-vcenter" centered onHide={handleClose} className="mobile-modalbody mt-4 modalbody mx-0" >
+            <Modal show={show}  size="xl" aria-labelledby="contained-modal-title-vcenter" centered onHide={handleClose} className="mobile-modalbody  modalbody mx-0" >
                    
                
                 <Modal.Body >
@@ -65,8 +65,8 @@ function Poster() {
                    
                
                    <Modal.Body >
-                       <div className=" sign-up d-flex pt-4 pb-4  justify-content-between align-items-center ">
-                           <h5>Welcome back</h5>
+                       <div className=" sign-up d-flex pt-4 pb-2  justify-content-between align-items-center ">
+                           <h5>Welcome back !</h5>
                            <button className="close" onClick={signInhandleClose}>
                             <IoCloseSharp />
                            </button>
