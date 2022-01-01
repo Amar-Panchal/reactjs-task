@@ -30,7 +30,7 @@ body{
   font-weight: normal;
 }
 .Navbar .row2 input{
-  width: 360px;
+  width: 86%;
   height: 38px;
   padding: 0 15px;
   font-size: 14px;
@@ -53,9 +53,10 @@ body{
 .poster{
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.6) 100%),url(./Images/backgroudposter.jpg);
   max-height: 500px;
-  background-position: 0%;
-  background-repeat:space;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
   overflow: hidden;
+  background-position:center;
   position:relative;
   width: 100%;
   
@@ -133,6 +134,8 @@ body{
   font-size: 20px;
   color: #FFFFFF;
   padding: 1px 6px 3px;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+
   border: 2px solid #000000;
 }
 .mobile-modalbody .mobile-signup-btn{
@@ -140,20 +143,22 @@ body{
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
-  
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+
   margin-left: 26px;
   text-align: center;
   color: #FFFFFF;
   padding: 10px 17px 10px;
-  margin-top: 19px;
+  
   border: 1px solid #2F6CE5;
   border-radius: 20px;
 
 }
-.modal-dialog{
+.modal-lg{
   margin-top: 130px !important;
-  width: 740px;
-  height: 513px;
+  width: 80%;
+  height: max-content;
+  padding-bottom: 30px;
 }
 .modal-header{
   background: #EFFFF4;
@@ -177,7 +182,7 @@ body{
   font-size: 15px;
   line-height: 17px;
   color: #3D3D3D;
-  margin-right: 36px;
+  margin-right: 10px;
 }
 .modalbody .sign-up p span{
   color: #2F6CE5;
@@ -185,7 +190,7 @@ body{
 
 }
 .modalbody .signup-form img{
-  width: 350px;
+  width: 100%;
   height: 350px;
 }
 .modalbody .signup-form{
@@ -193,21 +198,23 @@ body{
 
 }
 .modalbody .terms{
-  font-size: 10px;
+  font-size: 10.6px;
   line-height: 16px;
   text-align: right;
   letter-spacing: -0.008em;
   color: #000000;
+  padding-top: 10px;
+  
   opacity: 0.6;
-  margin-right: 36px;
+  margin-right: 10px;
 }
 .modalbody .signup-form input{
-  width: 360px;
+  width: 90%;
   height: 46px;
   padding-left: 15px;
   margin-left: 26px;
-
-
+  border: 1px solid #868E96;
+  background-color: #F7F8FA ;
 }
 .modalbody .close-btn{
   background-color: #FFFFFF;
@@ -217,12 +224,13 @@ body{
   border: 2px solid #000000;
   align-self: end;
   position: absoulte;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+
   margin-top:-59px ;
 }
 .modalbody .signup-form input.name{
-  width: 180px;
+  width: 45%;
   height: 46px;
-  
 }
 .modalbody .signup-form input.name2{
   margin-left: 0;
@@ -236,14 +244,15 @@ body{
   font-weight: 400;
   font-size: 17px;
   line-height: 16px;
-  width: 360px;
+  width: 90%;
   text-align: center;
   color: #000000;
   padding: 14px 0;
   margin-left: 26px;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 
   background-color: #FFFFFF;
-  border: 0.6px solid #D9D9DB;
+  border: 1px solid #D9D9DB;
   cursor: pointer;
 
 }
@@ -252,13 +261,15 @@ body{
   font-weight: 400;
   font-size: 17px;
   line-height: 16px;
-  width: 360px;
+  width: 90%;
   text-align: center;
   color: #000000;
   margin-left: 26px;
   padding: 14px 0;
   background-color: #FFFFFF;
-  border: 0.6px solid #D9D9DB;
+  border: 1px solid #D9D9DB;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+
 }
 .modalbody .forgot-password{
   margin-top: 36px;
@@ -271,7 +282,8 @@ body{
   font-weight: 600;
   font-size: 16px;
   line-height: 16px;
-  width: 360px;
+  width: 90%;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   margin-left: 26px;
   text-align: center;
   color: #FFFFFF;
@@ -519,7 +531,9 @@ body{
   color: white;
   font-size: 26px;
 }
-
+.mobile-header{
+  display:flex;
+}
 .mobile-header h6{
   font-weight: bold;
   font-size: 16px;
@@ -538,6 +552,18 @@ body{
 .mobile-header .icon span{
   margin-left: 1rem;
 }
+.mobile-signup-form .mobile-signup-link{
+  padding-top: 10px;
+  width: 90%;
+  display: flex;
+}
+.mobile-signup-form .mobile-signup-link p{
+   color: #0956f1;
+   cursor: pointer;
+   text-decoration: underline;
+   text-underline-position: under;
+}
+ 
 @media(max-width:994px){
     .Blog .row2{
       display: none;
@@ -552,6 +578,10 @@ body{
     }
     .poster  p{
       margin-left: 20px;
+    }
+    .modalbody .sign-up h5{
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
     .modalbody .modaltitle{
       display: none;
@@ -574,35 +604,58 @@ body{
     font-size: 16px;
   }
 
-  
-  
-
-  
 }
-@media(max-width:579px){
+@media(max-width:583px){
   .Navbar{
     display: none;
   }
   .Header{
     display: none;
   }
-  .container{
-    margin: 0px !important;
-    width: 100%;
-  }
-  .Card1{
-    margin-left: -6px 
-  }
   .modalbody .signup-form input{
-    width: 360px;
-    height: 46px;
-    padding-left: 15px;
-    margin-left: 5px;
-  
-  
+    width: 86%;
+    margin-left:10px ;
   }
-  .modalbody{
+  .modalbody .signup-form input.name{
+    width: 43%;
+  }
+  
+  .modalbody .signup-form .googlesingup-btn, .modalbody .signup-form .facebooksingup-btn, .modalbody .signup-form .signup-btn { 
+    margin-left: 10px;
     margin-right: 10px;
+    width: 86%;
   }
+  .mobile-modalbody .mobile-signup-btn{
+    margin-left: 10px;
+  }
+}
 
+@media(max-width:454px){
+  .Blog .row1 .Card1 .blog-user .eye-icon,.Blog .row1 .Card1 .blog-user h6 {
+    display: none !important;
+  }
+  
+  
+}
+@media(max-width:312px){
+  .mobile-header {
+    display: block !important;
+  }
+  .mobile-header .icon{
+    margin-top: 15px;
+  }
+  .share-icon{
+    display: none;
+  }
+  .Blog .row1 .icon{
+    display: none;
+  }
+  .mobile-signup-link{
+    display: block !important;
+    
+  }
+  .mobile-signup-link p{
+    margin-left: 14px;
+    margin-top: 10px;
+  }
 }
