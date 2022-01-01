@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react';
 import {GoLocation} from 'react-icons/go'
 import {RiPencilFill,RiCalendarEventFill} from 'react-icons/ri'
 import {BiInfoCircle , BiShoppingBag,BiLike} from 'react-icons/bi';
@@ -30,7 +30,7 @@ function Blog() {
                     <button className="icon" data-bs-toggle="dropdown" aria-expanded="false">
                     <BsThreeDots/>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
+                    <ul className="dropdown-menu dropdown-menu-end">
                         <li><button class="dropdown-item" type="button">Edit</button></li>
                         <li><button class="dropdown-item" type="button">Report</button></li>
                         <li><button class="dropdown-item" type="button">Option 3</button></li>
@@ -43,9 +43,9 @@ function Blog() {
                             <img src={userimg1} alt="bloguser"/>
                             <h5>Sarthak Kamra</h5>
                         </div>
-                        <div className="d-flex align-items-center justify-content-between">
-                            <span className="eye-icon"><BsEye /></span>
-                            <h6>1.4k views</h6>
+                        <div className="  d-flex align-items-center justify-content-between">
+                            <span className="eye-icon "><BsEye /></span>
+                            <h6 >1.4k views</h6>
                             <span className="share-icon"><BsShareFill/></span>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ function Blog() {
                     <button className="icon" data-bs-toggle="dropdown" aria-expanded="false">
                     <BsThreeDots/>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
+                    <ul className="dropdown-menu dropdown-menu-end">
                         <li><button class="dropdown-item" type="button">Edit</button></li>
                         <li><button class="dropdown-item" type="button">Report</button></li>
                         <li><button class="dropdown-item" type="button">Option 3</button></li>
@@ -74,8 +74,8 @@ function Blog() {
                             <h5>Sarah West</h5>
                         </div>
                         <div className="d-flex align-items-center justify-content-between">
-                            <span className="eye-icon"><BsEye /></span>
-                            <h6>1.4k views</h6>
+                            <span className="eye-icon "><BsEye /></span>
+                            <h6 className="">1.4k views</h6>
                             <span className="share-icon"><BsShareFill/></span>
                         </div>
                     </div>
@@ -90,7 +90,7 @@ function Blog() {
                     <button className="icon" data-bs-toggle="dropdown" aria-expanded="false">
                     <BsThreeDots/>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
+                    <ul className="dropdown-menu dropdown-menu-end">
                         <li><button class="dropdown-item" type="button">Edit</button></li>
                         <li><button class="dropdown-item" type="button">Report</button></li>
                         <li><button class="dropdown-item" type="button">Option 3</button></li>
@@ -124,7 +124,7 @@ function Blog() {
                     <button className="icon" data-bs-toggle="dropdown" aria-expanded="false">
                     <BsThreeDots/>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
+                    <ul className="dropdown-menu dropdown-menu-end">
                         <li><button class="dropdown-item" type="button">Edit</button></li>
                         <li><button class="dropdown-item" type="button">Report</button></li>
                         <li><button class="dropdown-item" type="button">Option 3</button></li>
