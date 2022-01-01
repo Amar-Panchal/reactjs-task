@@ -7,6 +7,7 @@ import signup from '../Images/signup.jpg'
 import {FcGoogle} from 'react-icons/fc'
 import {IoCloseSharp} from 'react-icons/io5'
 import {GoTriangleDown} from 'react-icons/go'
+import { Link } from 'react-router-dom';
 function Header() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -18,11 +19,11 @@ function Header() {
         <>
         <div className="Header container d-lg-flex d-md-flex justify-content-between align-items-center d-sm-none">
             <div className=" row1 d-flex justify-content-evenly">
-                <a href="#" className="active">All Posts(32)</a>
-                <a href="#">Article</a>
-                <a href="#">Event</a>
-                <a href="#">Education</a>
-                <a href="#">Job</a>
+                <Link to="/" className="active">All Posts(32)</Link>
+                <Link to="#">Article</Link>
+                <Link to="#">Event</Link>
+                <Link to="#">Education</Link>
+                <Link to="#">Job</Link>
             </div>
             <div className="row2">
                 <div >
@@ -32,13 +33,13 @@ function Header() {
 
             </div>
             
-            <Modal show={show}  size="lg"  onHide={handleClose} className="modalbody d-sm-none d-md-block d-lg-block" >
+            <Modal show={show}  size="xl" aria-labelledby="contained-modal-title-vcenter" centered  onHide={handleClose} className="modalbody" >
                     <button className="close-btn" onClick={handleClose}>
                     <IoCloseSharp />
                     </button>
                 <Modal.Header >
                 
-                <Modal.Title className="modaltitle ">Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼
+                <Modal.Title className="modaltitle mx-auto">Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼
                 </Modal.Title>
                 </Modal.Header>
                 <Modal.Body >
@@ -46,9 +47,9 @@ function Header() {
                         <h5>Create Account</h5>
                         <p>Already have an account?<span  onClick={signInhandleShow}> Sign In </span></p>
                     </div>
-                    <div className="signup-form d-flex justify-content-between align-content-center">
+                    <div className="signup-form d-flex justify-content-between align-items-center pb-3">
                         <div>
-                            <div className=" d-inline-flex">   
+                            <div className=" d-flex">   
                                 <input className="name" type="text" placeholder="First Name" />
                                 <input className="name name2" type="text" placeholder="Last Name" />
                             </div>
@@ -72,13 +73,13 @@ function Header() {
                 </Modal>
 
 
-                <Modal show={signInshow}  size="lg" onHide={signInhandleClose} className="modalbody  d-sm-none  d-md-block d-lg-block" >
+                <Modal show={signInshow}  size="xl" aria-labelledby="contained-modal-title-vcenter" centered onHide={signInhandleClose} className="modalbody " >
                     <button className="close-btn" onClick={signInhandleClose}>
                     <IoCloseSharp />
                     </button>
                 <Modal.Header >
                 
-                <Modal.Title className="modaltitle">Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼
+                <Modal.Title className="modaltitle mx-auto">Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼
                 </Modal.Title>
                 </Modal.Header>
                 <Modal.Body >
@@ -86,14 +87,16 @@ function Header() {
                         <h5>Sign In</h5>
                         <p>Don’t have an account yet?<span  onClick={handleShow}> Create new for free!</span></p>
                     </div>
-                    <div className="signup-form d-flex justify-content-between align-content-center">
+                    <div className="signup-form d-flex justify-content-between align-items-center pb-5">
                         <div>
-                        <input  type="email" placeholder="Email" />
-                        <input  type="password" placeholder="Password" />  
-                        <button className="signup-btn">Sign In</button>
-                        <button className='facebooksingup-btn'><span><BsFacebook /></span> Sign In with Facebook</button>
-                        <button className='googlesingup-btn'><span><FcGoogle /></span> Sign In with Google</button>
-                        <h6 className="forgot-password text-center">Forgot Password?</h6>
+                            <div>
+                                <input type="email" placeholder="Email" /><br/>
+                                <input type="password" placeholder="Password" /><br />
+                            </div>
+                            <button className="signup-btn">Sign In</button>
+                            <button className='facebooksingup-btn'><span><BsFacebook /></span> Sign In with Facebook</button>
+                            <button className='googlesingup-btn'><span><FcGoogle /></span> Sign In with Google</button>
+
                         </div>
                         <div>
                             <img src={signup} alt="" />
@@ -105,13 +108,13 @@ function Header() {
 
 
         </div>  
-        <div className="mobile-header d-flex mt-4 mx-3 justify-content-between align-content-center d-lg-none d-md-none">
+        <div className="mobile-header  container mt-4 justify-content-between align-content-center d-lg-none d-md-none">
             <h6>Posts(368)</h6>
-            <div class="btn-group">
+            <div className="btn-group">
                     <button className="icon" data-bs-toggle="dropdown" aria-expanded="false">
                     Filter:All <span><GoTriangleDown/></span>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
+                    <ul className="dropdown-menu dropdown-menu-end">
                         <li><button class="dropdown-item" type="button">Article</button></li>
                         <li><button class="dropdown-item" type="button">Event</button></li>
                         <li><button class="dropdown-item" type="button">Eduction</button></li>
